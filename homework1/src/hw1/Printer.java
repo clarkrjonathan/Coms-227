@@ -1,5 +1,6 @@
 package hw1;
 
+
 /**
  * A printer object models pages being printed from a simple printer.
  */
