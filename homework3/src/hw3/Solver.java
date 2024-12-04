@@ -9,8 +9,7 @@ import api.Move;
 
 /**
  * A puzzle solver for the the Block Slider game.
- * <p>
- * THE ONLY METHOD YOU ARE CHANGING IN THIS CLASS IS solve().
+ * 
  */
 public class Solver {
 	/**
@@ -67,8 +66,6 @@ public class Solver {
 	}
 
 	/**
-	 * EXTRA CREDIT 15 POINTS
-	 * <p>
 	 * Recursively search for solutions to the given board instance according to the
 	 * algorithm described in the assignment pdf. This method does not return
 	 * anything its purpose is to update the instance variable solutions with every
