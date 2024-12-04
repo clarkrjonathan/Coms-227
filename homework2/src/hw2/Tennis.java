@@ -1,7 +1,8 @@
 package hw2;
 
-/*
+/**
  * Runs the logic for scoring a Tennis match.
+ * @author Jonathan Clark
  */
 public class Tennis {
 

@@ -11,6 +11,7 @@ import api.Orientation;
 
 /**
  * Utilities for parsing string descriptions of a grid.
+ * @author Jonathan Clark
  */
 public class GridUtil {
 	/**

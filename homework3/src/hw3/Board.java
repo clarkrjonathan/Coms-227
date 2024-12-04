@@ -11,6 +11,7 @@ import api.Orientation;
 /**
  * Represents a board in the Block Slider game. A board contains a 2D grid of
  * cells and a list of blocks that slide over the cells.
+ * @author Jonathan Clark
  */
 public class Board {
 	/**

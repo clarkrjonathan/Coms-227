@@ -9,7 +9,7 @@ import api.Move;
 
 /**
  * A puzzle solver for the the Block Slider game.
- * 
+ * @author Jonathan Clark
  */
 public class Solver {
 	/**

@@ -7,6 +7,7 @@ import api.Orientation;
 
 /**
  * Represents a block in the Block Slider game.
+ * @author Jonathan Clark
  */
 public class Block {
 
