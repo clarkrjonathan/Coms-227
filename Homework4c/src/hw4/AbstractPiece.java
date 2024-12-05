@@ -8,6 +8,7 @@ import api.Position;
 
 /**
  * Abstract superclass for implementations of the Piece interface.
+ * @author Jonathan Clark
  */
 public abstract class AbstractPiece implements Piece
 {
@@ -50,7 +51,12 @@ public abstract class AbstractPiece implements Piece
 	 * @return copy of the cells in this piece
 	 */
   public Cell[] getCells() {
-	  return cells;
+	  Cell[] copyCells = new Cell[cells.length];
+	  for(int i = 0; i < cells.length; i++) {
+		  copyCells[i] = new Cell(cells[i]);
+	  }
+	  
+	  return copyCells;
   }
   
   /**
@@ -59,9 +65,14 @@ public abstract class AbstractPiece implements Piece
 	 * @return copy of the cells in this piece, with absolute positions
 	 */
   public Cell[] getCellsAbsolute() {
+	  Cell[] absoluteCells = new Cell[cells.length];
+	  for(int i = 0; i < cells.length; i++) {
+		  Cell cell = cells[i];
+		  absoluteCells[i] = new Cell(cell.getIcon(), 
+				  			new Position(cell.getRow() + position.row(), cell.getCol() + position.col()));
+	  }
 	  //create cell array thats the same cells just with the position of the piece added to it
-	  return null;
-	  //TODO
+	  return absoluteCells;
   }
   
   /**
@@ -115,7 +126,12 @@ public abstract class AbstractPiece implements Piece
 	 * Cycles the icons within the cells of this piece. Each icon is shifted forward to the next cell (in the original ordering of the cells). The last icon wraps around to the first cell.
 	 */
   public void cycle() {
-	  //TODO
+	  Cell[] cycledCells = getCells();
+	  cycledCells[0].setIcon(cells[cells.length-1].getIcon());
+	  for(int i = 1; i < cells.length; i++) {
+		  cycledCells[i].setIcon(cells[i-1].getIcon());
+	  }
+	  setCells(cycledCells);
   }
     
   @Override
