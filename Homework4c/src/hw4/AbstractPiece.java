@@ -94,27 +94,21 @@ public abstract class AbstractPiece implements Piece
 	 * Shifts the position of this piece down (increasing the row) by one. No bounds checking is done.
 	 */
   public void shiftDown() {
-	  for(int i = 0; i < cells.length; i++) {
-		  cells[i].setRow(cells[i].getRow() + 1);
-	  }
+	  position = new Position(position.row() + 1, position.col());
   }
   
   /**
 	 * Shifts the position of this piece left (decreasing the column) by one. No bounds checking is done.
 	 */
   public void shiftLeft() {
-	  for(int i = 0; i < cells.length; i++) {
-		  cells[i].setCol(cells[i].getCol() - 1);
-	  }
+	  position = new Position(position.row(), position.col() - 1);
   }
   
   /**
 	 * Shifts the position of this piece right (increasing the column) by one. No bounds checking is done.
 	 */
   public void shiftRight() {
-	  for(int i = 0; i < cells.length; i++) {
-		  cells[i].setCol(cells[i].getCol() + 1);
-	  }
+	  position = new Position(position.row(), position.col() + 1);
   }
   
   /**

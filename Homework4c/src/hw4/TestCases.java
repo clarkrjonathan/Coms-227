@@ -40,11 +40,14 @@ class TestCases {
 		
 		LShapedPiece piece = new LShapedPiece(new Position(0,0), icons);
 		piece.shiftDown();
-		assertEquals(1, piece.getCells()[0].getRow());
+		assertEquals(0, piece.getCells()[0].getRow());
+		assertEquals(1, piece.getCellsAbsolute()[0].getRow());
 		piece.shiftRight();
-		assertEquals(1, piece.getCells()[0].getCol());
+		assertEquals(0, piece.getCells()[0].getCol());
+		assertEquals(1, piece.getCellsAbsolute()[0].getCol());
 		piece.shiftLeft();
 		assertEquals(0, piece.getCells()[0].getCol());
+		assertEquals(0, piece.getCellsAbsolute()[0].getCol());
 	}
 	
 	@Test
@@ -109,6 +112,44 @@ class TestCases {
 		Cell[] cells = piece.getCells();
 		cells[0] = new Cell(new Icon(Color.GREEN), new Position(3, 4));
 		assertEquals(Color.RED, piece.getCells()[0].getIcon().getColorHint());
+	}
+	
+	@Test
+	void test6() {
+		Icon[] icons = new Icon[4];
+		
+		icons[0] = new Icon(Color.RED);
+		icons[1] = new Icon(Color.CYAN);
+		icons[2] = new Icon(Color.BLUE);
+		icons[3] = new Icon(Color.YELLOW);
+		
+		
+		TeePiece piece = new TeePiece(new Position(0,0), icons);
+		piece.cycle();
+		assertEquals(Color.YELLOW, piece.getCells()[0].getIcon().getColorHint());
+		assertEquals(Color.RED, piece.getCells()[1].getIcon().getColorHint());
+		assertEquals(Color.CYAN, piece.getCells()[2].getIcon().getColorHint());
+		assertEquals(Color.BLUE, piece.getCells()[3].getIcon().getColorHint());
+	}
+	
+	@Test
+	void test7() {
+		Icon[] icons = new Icon[4];
+		
+		for(int i = 0; i < 4; i ++) {
+			icons[i] = new Icon(Color.RED);
+		}
+		
+		TeePiece piece = new TeePiece(new Position(0,0), icons);
+		piece.shiftDown();
+		assertEquals(0, piece.getCells()[0].getRow());
+		assertEquals(1, piece.getCellsAbsolute()[0].getRow());
+		piece.shiftRight();
+		assertEquals(0, piece.getCells()[0].getCol());
+		assertEquals(1, piece.getCellsAbsolute()[0].getCol());
+		piece.shiftLeft();
+		assertEquals(0, piece.getCells()[0].getCol());
+		assertEquals(0, piece.getCellsAbsolute()[0].getCol());
 	}
 	
 	
