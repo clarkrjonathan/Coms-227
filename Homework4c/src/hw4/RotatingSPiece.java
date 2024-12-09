@@ -1,72 +1,27 @@
 package hw4;
 
 import api.Cell;
+import api.Icon;
 import api.Position;
 
 /**
  * Concrete class that represents a piece in an "s" shape that can rotate 90 degrees about its center
- * @author 115jo
+ * @author Jonathan Clark
  *
  */
 public class RotatingSPiece extends RotatingPiece{
 
-	protected RotatingSPiece(Position position) {
+	protected RotatingSPiece(Position position, Icon[] icons) {
 		super(position);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public Position getPosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Cell[] getCells() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Cell[] getCellsAbsolute() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setCells(Cell[] givenCells) {
-		// TODO Auto-generated method stub
+		Cell[] cells = new Cell[4];
+		cells[0] = new Cell(icons[0], new Position(0,0));
+		cells[1] = new Cell(icons[1], new Position(0, 1));
+		cells[2] = new Cell(icons[2], new Position(1,1));
+		cells[3] = new Cell(icons[3], new Position(1, 2));
 		
+		super.setCells(cells);
 	}
 
-	@Override
-	public void shiftDown() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void shiftLeft() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void shiftRight() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void transform() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void cycle() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }

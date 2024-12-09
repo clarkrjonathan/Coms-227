@@ -152,6 +152,65 @@ class TestCases {
 		assertEquals(0, piece.getCellsAbsolute()[0].getCol());
 	}
 	
+	//qoutes rotate
+	@Test
+	void test8() {
+		Icon[] icons = new Icon[4];
+		
+		for(int i = 0; i < 4; i ++) {
+			icons[i] = new Icon(Color.RED);
+		}
+		
+		QoutesPiece piece = new QoutesPiece(new Position(0,0), icons);
+		piece.transform();
+		
+		//coords (0,2)
+		assertEquals(0,piece.getCells()[0].getRow());
+		assertEquals(2,piece.getCells()[0].getCol());
+		
+		//coords (0,1)
+		assertEquals(0,piece.getCells()[1].getRow());
+		assertEquals(1,piece.getCells()[1].getCol());
+
+		//coords (2, 2)
+		assertEquals(2,piece.getCells()[2].getRow());
+		assertEquals(2,piece.getCells()[2].getCol());
+		
+		//coords (2, 1)
+		assertEquals(2,piece.getCells()[3].getRow());
+		assertEquals(1,piece.getCells()[3].getCol());
+		
+	}
+	
+	//rotate s piece
+	@Test
+	void test9() {
+		Icon[] icons = new Icon[4];
+		
+		for(int i = 0; i < 4; i ++) {
+			icons[i] = new Icon(Color.RED);
+		}
+		
+		RotatingSPiece piece = new RotatingSPiece(new Position(0,0), icons);
+		piece.transform();
+		
+		//coords (0,2)
+		assertEquals(0,piece.getCells()[0].getRow());
+		assertEquals(2,piece.getCells()[0].getCol());
+		
+		//coords (1,2)
+		assertEquals(1,piece.getCells()[1].getRow());
+		assertEquals(2,piece.getCells()[1].getCol());
+
+		//coords (1, 1)
+		assertEquals(1,piece.getCells()[2].getRow());
+		assertEquals(1,piece.getCells()[2].getCol());
+		
+		//coords (2, 1)
+		assertEquals(2,piece.getCells()[3].getRow());
+		assertEquals(1,piece.getCells()[3].getCol());
+		
+	}
 	
 
 }

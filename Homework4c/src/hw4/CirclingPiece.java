@@ -9,4 +9,10 @@ public class CirclingPiece extends SlidingPiece{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void transform() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
