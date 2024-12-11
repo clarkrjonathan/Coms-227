@@ -10,6 +10,7 @@ import api.Position;
  */
 public abstract class BBB extends AbstractPiece{
 
+
 	protected BBB(Position position) {
 		super(position);
 		// TODO Auto-generated constructor stub
@@ -19,8 +20,17 @@ public abstract class BBB extends AbstractPiece{
 	 * Slides blocks starting from head, and moving the head towards the given position
 	 * The rest of the blocks in the line will follow copying the position from the next cell in line
 	 */
-	protected void slide(Cell head, Position position) {
-		//TODO
+	protected void slide(Position position) {
+		Cell[] updatedCells = super.getCells();
+		Cell[] currentCells = super.getCells();
+		
+		for (int i = 1; i < super.getCells().length; i++) {
+			updatedCells[i].setPosition(new Position(currentCells[i - 1].getRow(),currentCells[i - 1].getCol()));
+		}
+		
+		updatedCells[0].setPosition(position);
+		
+		super.setCells(updatedCells);
 		
 	}
 

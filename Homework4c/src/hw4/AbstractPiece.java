@@ -81,8 +81,6 @@ public abstract class AbstractPiece implements Piece
 	 * @param givenCells new cells for this piece
 	 */
   public void setCells(Cell[] givenCells) {
-	  //TODO
-	  //for now only initializes cells, cant update, may need to change
 	  cells = new Cell[givenCells.length];
 	  
 	  for(int i = 0; i < givenCells.length; i++) {
