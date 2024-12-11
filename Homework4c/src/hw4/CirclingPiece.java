@@ -1,10 +1,11 @@
 package hw4;
 
+import api.Icon;
 import api.Position;
 
 public class CirclingPiece extends BBB{
 
-	protected CirclingPiece(Position position) {
+	public CirclingPiece(Position position, Icon[] icons) {
 		super(position);
 		// TODO Auto-generated constructor stub
 	}
