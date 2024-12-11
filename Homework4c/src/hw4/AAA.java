@@ -8,11 +8,11 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public abstract class FlippingPiece extends AbstractPiece{
+public abstract class AAA extends AbstractPiece{
 
 
 	
-	protected FlippingPiece(Position position) {
+	protected AAA(Position position) {
 		super(position);
 	}
 

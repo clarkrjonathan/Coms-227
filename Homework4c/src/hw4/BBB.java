@@ -8,9 +8,9 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public abstract class SlidingPiece extends AbstractPiece{
+public abstract class BBB extends AbstractPiece{
 
-	protected SlidingPiece(Position position) {
+	protected BBB(Position position) {
 		super(position);
 		// TODO Auto-generated constructor stub
 	}

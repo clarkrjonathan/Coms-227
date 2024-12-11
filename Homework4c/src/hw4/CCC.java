@@ -8,14 +8,14 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public abstract class RotatingPiece extends AbstractPiece{
+public abstract class CCC extends AbstractPiece{
 	
 	//TODO check declaration
 	private static final Position[] EDGES = {new Position(0,1), new Position(1, 2), new Position(2, 1), new Position(1, 0)};
 	private static final Position[] CORNERS = {new Position(0,0), new Position(0, 2), new Position(2,2), new Position(2, 0)};
 	
 
-	protected RotatingPiece(Position position) {
+	protected CCC(Position position) {
 		super(position);
 	}
 	

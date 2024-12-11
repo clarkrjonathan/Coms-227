@@ -9,7 +9,7 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public class LShapedPiece extends FlippingPiece{
+public class LShapedPiece extends AAA{
 	public LShapedPiece(Position position, Icon[] icons) {
 		super(position);
 		Cell[] cells = new Cell[4];

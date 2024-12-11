@@ -9,7 +9,7 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public class QuotesPiece extends RotatingPiece{
+public class QuotesPiece extends CCC{
 
 	protected QuotesPiece(Position position, Icon[] icons) {
 		super(position);

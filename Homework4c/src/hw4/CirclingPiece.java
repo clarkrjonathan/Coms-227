@@ -2,7 +2,7 @@ package hw4;
 
 import api.Position;
 
-public class CirclingPiece extends SlidingPiece{
+public class CirclingPiece extends BBB{
 
 	protected CirclingPiece(Position position) {
 		super(position);

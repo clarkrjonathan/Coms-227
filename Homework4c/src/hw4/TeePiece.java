@@ -4,7 +4,7 @@ import api.Cell;
 import api.Icon;
 import api.Position;
 
-public class TeePiece extends FlippingPiece{
+public class TeePiece extends AAA{
 
 	protected TeePiece(Position position, Icon[] icons) {
 		super(position);

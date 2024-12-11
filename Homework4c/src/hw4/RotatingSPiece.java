@@ -9,7 +9,7 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public class RotatingSPiece extends RotatingPiece{
+public class RotatingSPiece extends CCC{
 
 	protected RotatingSPiece(Position position, Icon[] icons) {
 		super(position);
