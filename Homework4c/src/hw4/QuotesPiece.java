@@ -9,9 +9,9 @@ import api.Position;
  * @author Jonathan Clark
  *
  */
-public class QoutesPiece extends RotatingPiece{
+public class QuotesPiece extends RotatingPiece{
 
-	protected QoutesPiece(Position position, Icon[] icons) {
+	protected QuotesPiece(Position position, Icon[] icons) {
 		super(position);
 		Cell[] cells = new Cell[4];
 		cells[0] = new Cell(icons[0], new Position(0,0));

@@ -161,7 +161,7 @@ class TestCases {
 			icons[i] = new Icon(Color.RED);
 		}
 		
-		QoutesPiece piece = new QoutesPiece(new Position(0,0), icons);
+		QuotesPiece piece = new QuotesPiece(new Position(0,0), icons);
 		piece.transform();
 		
 		//coords (0,2)
