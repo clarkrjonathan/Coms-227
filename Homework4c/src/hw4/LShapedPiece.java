@@ -3,6 +3,7 @@ package hw4;
 import api.Cell;
 import api.Icon;
 import api.Position;
+import java.lang.IllegalArgumentException;
 
 /**
  * Concrete class that represents an L shaped piece which can flip along its vertical axis
@@ -12,6 +13,9 @@ import api.Position;
 public class LShapedPiece extends AAA{
 	public LShapedPiece(Position position, Icon[] icons) {
 		super(position);
+		if(icons.length != 4) {
+			throw new IllegalArgumentException();
+		}
 		Cell[] cells = new Cell[4];
 		cells[0] = new Cell(icons[0], new Position(0,0));
 		cells[1] = new Cell(icons[1], new Position(0, 1));
@@ -19,6 +23,7 @@ public class LShapedPiece extends AAA{
 		cells[3] = new Cell(icons[3], new Position(2, 1));
 		
 		super.setCells(cells);
+		}
+
 	}
 
-}

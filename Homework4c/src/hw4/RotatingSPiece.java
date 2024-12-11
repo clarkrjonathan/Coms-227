@@ -13,6 +13,9 @@ public class RotatingSPiece extends CCC{
 
 	protected RotatingSPiece(Position position, Icon[] icons) {
 		super(position);
+		if(icons.length != 4) {
+			throw new IllegalArgumentException();
+		}
 		Cell[] cells = new Cell[4];
 		cells[0] = new Cell(icons[0], new Position(0,0));
 		cells[1] = new Cell(icons[1], new Position(0, 1));
