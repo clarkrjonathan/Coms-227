@@ -4,7 +4,10 @@ import api.Cell;
 import api.Position;
 
 /**
- * Represents a piece that transforms by "Sliding" 
+ * Represents a piece that transforms by "Sliding". 
+ * Parent to {@link SnakingPiece}, {@link CirclingPiece}
+ * 
+ * 
  * @author Jonathan Clark
  *
  */

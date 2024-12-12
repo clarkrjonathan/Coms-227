@@ -4,7 +4,8 @@ import api.Cell;
 import api.Position;
 
 /**
- * abstract piece that can flip along its vertical axis
+ * Abstract piece that can flip along its vertical axis
+ * Parent to {@link LShapedPiece}, {@link TeePiece}
  * @author Jonathan Clark
  *
  */

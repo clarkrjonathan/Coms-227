@@ -4,8 +4,16 @@ import api.Cell;
 import api.Icon;
 import api.Position;
 
+/**
+ * Piece that circles around the bounding box clockwise
+ * @author Jonathan Clark
+ *
+ */
 public class CirclingPiece extends BBB{
 	
+	/**
+	 * Order of positions that the "head" piece moves in
+	 */
 	private static final Position[] POSITION_ORDER = {
 			new Position(0,0),
 			new Position(0,1),
@@ -17,8 +25,16 @@ public class CirclingPiece extends BBB{
 			new Position(1,0)
 	};
 	
+	/**
+	 * Index of the current position of the head
+	 */
 	private int currPos;
-
+	
+	/**
+	 * Creates a piece that circles around the bounding box clockwise
+	 * @param position upper left corner of the piece bounding box
+	 * @param icons color data for each cell
+	 */
 	public CirclingPiece(Position position, Icon[] icons) {
 		super(position);
 		if(icons.length != 4) {
@@ -33,7 +49,10 @@ public class CirclingPiece extends BBB{
 		super.setCells(cells);
 		currPos = 0;
 	}
-
+	
+	/**
+	 * Circles the piece one step
+	 */
 	@Override
 	public void transform() {
 		currPos = currPos >= 7 ? 0 : currPos + 1;

@@ -11,6 +11,11 @@ import api.Position;
  */
 public class QuotesPiece extends CCC{
 
+	/**
+	 * Constructs a QuotesPiece
+	 * @param position upper left corner of the piece bounding box
+	 * @param icons color data for each cell
+	 */
 	protected QuotesPiece(Position position, Icon[] icons) {
 		super(position);
 		if(icons.length != 4) {
