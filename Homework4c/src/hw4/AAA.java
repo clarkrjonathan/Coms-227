@@ -16,7 +16,10 @@ public abstract class AAA extends AbstractPiece{
 	protected AAA(Position position) {
 		super(position);
 	}
-
+	
+	/**
+	 * Flips a cell along its vertical axis
+	 */
 	@Override
 	public void transform() {
 		Cell[] cells = new Cell[super.getCells().length];

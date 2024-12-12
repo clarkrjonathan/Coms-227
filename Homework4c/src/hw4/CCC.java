@@ -4,8 +4,8 @@ import api.Cell;
 import api.Position;
 
 /**
- * Abstract piece that can rotate 90 degrees about the center
- * Parent to {@link QuotesPiece)}, {@link RotatingSPiece}
+ * Abstract piece that can rotate 90 degrees clockwise about the center
+ * Parent to {@link QuotesPiece}, {@link RotatingSPiece}
  * @author Jonathan Clark
  *
  */
@@ -16,7 +16,7 @@ public abstract class CCC extends AbstractPiece{
 	}
 	
 	/**
-	 * Common transform method that just runs through all cells and rotates them
+	 * Common transform method that just runs through all cells and rotates them 90 degrees clockwise
 	 */
 	public void transform() {
 		Cell[] transformedCells = super.getCells();

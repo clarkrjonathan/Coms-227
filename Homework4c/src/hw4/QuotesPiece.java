@@ -16,7 +16,7 @@ public class QuotesPiece extends CCC{
 	 * @param position upper left corner of the piece bounding box
 	 * @param icons color data for each cell
 	 */
-	protected QuotesPiece(Position position, Icon[] icons) {
+	public QuotesPiece(Position position, Icon[] icons) {
 		super(position);
 		if(icons.length != 4) {
 			throw new IllegalArgumentException();

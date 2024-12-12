@@ -5,8 +5,13 @@ import api.Icon;
 import api.Position;
 
 public class TeePiece extends AAA{
-
-	protected TeePiece(Position position, Icon[] icons) {
+	
+	/**
+	 * Constructs a TeePiece
+	 * @param position position of upper left corner
+	 * @param icons icon data for cells
+	 */
+	public TeePiece(Position position, Icon[] icons) {
 		super(position);
 		if(icons.length != 4) {
 			throw new IllegalArgumentException();

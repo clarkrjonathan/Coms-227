@@ -11,6 +11,12 @@ import java.lang.IllegalArgumentException;
  *
  */
 public class LShapedPiece extends AAA{
+	
+	/**
+	 * Constructs LShapedPiece
+	 * @param position upper left corner of the piece
+	 * @param icons icon data for piece
+	 */
 	public LShapedPiece(Position position, Icon[] icons) {
 		super(position);
 		if(icons.length != 4) {

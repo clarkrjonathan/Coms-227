@@ -16,7 +16,6 @@ public abstract class BBB extends AbstractPiece{
 
 	protected BBB(Position position) {
 		super(position);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

@@ -34,7 +34,6 @@ public abstract class AbstractPiece implements Piece
     this.position = position;
   }
 
-  // YOUR CODE HERE TO IMPLEMENT THE Piece INTERFACE
   
   /**
 	 * Returns the position of this piece (upper-left corner of its bounding box).
