@@ -45,8 +45,8 @@ public class SnakingPiece extends BBB{
 
 	@Override
 	public void transform() {
+		currPos = currPos > 7 ? 0 : currPos + 1;
 		super.slide(POSITION_ORDER[currPos]);
-		currPos = currPos > 11 ? 0 : currPos + 1;
 		
 	}
 

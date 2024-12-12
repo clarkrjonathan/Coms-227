@@ -212,5 +212,22 @@ class TestCases {
 		
 	}
 	
+	//slide
+	@Test
+	void test10() {
+		Icon[] icons = new Icon[4];
+		
+		for(int i = 0; i < 4; i ++) {
+			icons[i] = new Icon(Color.RED);
+		}
+		
+		CirclingPiece  piece = new CirclingPiece(new Position(0,0), icons);
+		piece.transform();
+		
+		//coords (0,1)
+		assertEquals(0,piece.getCells()[0].getRow());
+		assertEquals(1,piece.getCells()[0].getCol());
+	}
+	
 
 }

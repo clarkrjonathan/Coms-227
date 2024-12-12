@@ -36,8 +36,8 @@ public class CirclingPiece extends BBB{
 
 	@Override
 	public void transform() {
-		super.slide(POSITION_ORDER[currPos]);
 		currPos = currPos > 7 ? 0 : currPos + 1;
+		super.slide(POSITION_ORDER[currPos]);
 	}
 
 }
