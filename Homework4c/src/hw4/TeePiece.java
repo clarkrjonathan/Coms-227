@@ -4,6 +4,11 @@ import api.Cell;
 import api.Icon;
 import api.Position;
 
+/**
+ * Tee shaped piece that flips along its vertical axis
+ * @author Jonathan Clark
+ *
+ */
 public class TeePiece extends AAA{
 	
 	/**
